@@ -65,8 +65,8 @@ class Common(Configuration):
 
     ANYMAIL = {
     # (exact settings here depend on your ESP...)
-    "MAILGUN_API_KEY": "key-5d7f36f3bd902a433e14a0f213124b7c",
-    "MAILGUN_SENDER_DOMAIN": 'sandbox19484b242b4944d8889f040de15b27c2.mailgun.org',  # your Mailgun domain, if needed
+    "MAILGUN_API_KEY": "",
+    "MAILGUN_SENDER_DOMAIN": '',  # your Mailgun domain, if needed
     }
     EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"  # or sendgrid.EmailBackend, or...
     DEFAULT_FROM_EMAIL = "vedant.bari@analogyplus.com"  # if you don't already have this in settings
