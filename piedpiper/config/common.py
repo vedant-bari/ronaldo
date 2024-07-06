@@ -146,7 +146,7 @@ class Common(Configuration):
         'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     )
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     # Media files
     MEDIA_ROOT = join(os.path.dirname(BASE_DIR), 'media')
     MEDIA_URL = '/media/'
