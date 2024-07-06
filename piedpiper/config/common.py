@@ -54,7 +54,7 @@ class Common(Configuration):
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'django.contrib.messages.middleware.MessageMiddleware',
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
-        'whitenoise.middleware.WhiteNoiseMiddleware',
+        # 'whitenoise.middleware.WhiteNoiseMiddleware',
     )
 
     ALLOWED_HOSTS = ["*"]
