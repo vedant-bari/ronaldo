@@ -9751,3 +9751,214 @@ textarea.form-control {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* Featured projects: interactive architecture walkthroughs */
+.portfolio-projects {
+  background: #f8f9fc;
+}
+.portfolio-projects .heading-section > p {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.architecture-project {
+  background: #fff;
+  border: 1px solid #e8ebf2;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 0 auto 30px;
+  box-shadow: 0 10px 35px rgba(20, 35, 70, .06);
+}
+.project-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+.project-heading h3 {
+  color: #222;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 8px 0 10px;
+}
+.project-heading p {
+  color: #666;
+  margin-bottom: 0;
+  max-width: 780px;
+}
+.project-index {
+  color: #3e64ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.project-source {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin-top: 8px;
+}
+.project-work-label {
+  flex: 0 0 auto;
+  background: #f0f2f7;
+  color: #555;
+  border-radius: 20px;
+  padding: 8px 13px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 25px;
+}
+.project-meta span {
+  background: #f2f4f9;
+  color: #4c566a;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.architecture-label {
+  color: #242a36;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 15px;
+}
+.architecture-label small {
+  color: #8991a1;
+  font-size: 12px;
+  font-weight: 400;
+}
+.architecture-flow {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.architecture-node {
+  background: #fbfcff;
+  border: 1px solid #dfe5f0;
+  border-left: 4px solid #3e64ff;
+  border-radius: 7px;
+  padding: 0;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.architecture-node[open] {
+  background: #fff;
+  border-color: #3e64ff;
+  box-shadow: 0 5px 18px rgba(62, 100, 255, .09);
+}
+.architecture-node summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 15px 42px 15px 17px;
+  color: #252b38;
+}
+.architecture-node summary::-webkit-details-marker {
+  display: none;
+}
+.architecture-node summary:after {
+  content: "+";
+  position: absolute;
+  right: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3e64ff;
+  font-size: 21px;
+  font-weight: 400;
+}
+.architecture-node[open] summary:after {
+  content: "−";
+}
+.architecture-node summary strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+.architecture-node summary small {
+  display: block;
+  color: #7a8496;
+  font-size: 11px;
+  margin-top: 3px;
+}
+.architecture-node summary .node-number {
+  float: left;
+  margin: 0 12px 0 0;
+  color: #3e64ff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 22px;
+}
+.architecture-node p {
+  border-top: 1px solid #edf0f6;
+  color: #606b7d;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 12px 17px 15px;
+}
+.flow-arrow {
+  color: #3e64ff;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.7;
+}
+.architecture-branches {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.cloud-branches {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.project-explainer {
+  background: #f6f8fc;
+  border-radius: 7px;
+  border-left: 3px solid #aebeff;
+  margin-top: 22px;
+  padding: 15px 18px;
+}
+.project-explainer strong {
+  color: #333d50;
+  font-size: 13px;
+}
+.project-explainer p {
+  color: #697386;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 5px 0 0;
+}
+.architecture-node summary:focus-visible,
+.project-source:focus-visible {
+  outline: 3px solid #3e64ff;
+  outline-offset: 3px;
+}
+@media (max-width: 767.98px) {
+  .architecture-project {
+    padding: 20px 16px;
+    margin-bottom: 20px;
+  }
+  .project-heading {
+    display: block;
+  }
+  .project-heading h3 {
+    font-size: 20px;
+  }
+  .project-source {
+    margin-top: 16px;
+    white-space: normal;
+  }
+  .project-work-label {
+    display: inline-block;
+    margin-top: 14px;
+  }
+  .architecture-branches,
+  .cloud-branches {
+    grid-template-columns: 1fr;
+  }
+  .architecture-label small {
+    display: block;
+    margin-top: 3px;
+  }
+}
