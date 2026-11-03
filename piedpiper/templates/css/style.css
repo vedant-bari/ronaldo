@@ -10147,3 +10147,62 @@ textarea.form-control {
   .capability-card { transition: none; }
   .capability-card:hover { transform: none; }
 }
+
+
+/* Shared technology marks across skills, projects and certifications */
+.skill-logo-row,
+.project-logo-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0 0 14px;
+}
+.tech-logo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid #e8ecf3;
+  border-radius: 5px;
+  background: #fff;
+  color: #5d687a;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.tech-logo-chip img {
+  display: block;
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+}
+#page-3 .skill-logo-row { min-height: 34px; }
+#page-3 .skill-logo-row .tech-logo-chip { background: #f8faff; }
+.project-logo-row {
+  margin-top: -7px;
+  margin-bottom: 19px;
+}
+.project-logo-row .tech-logo-chip { background: #fbfcff; }
+.certification-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin: 0 0 10px;
+  border: 1px solid #edf0f5;
+  border-radius: 8px;
+  background: #fff;
+}
+.certification-mark img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+@media (max-width: 767.98px) {
+  .skill-logo-row,
+  .project-logo-row { gap: 6px; }
+  .tech-logo-chip { font-size: 9px; padding: 4px 7px; }
+}
