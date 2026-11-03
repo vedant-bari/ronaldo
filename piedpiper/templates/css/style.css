@@ -10206,3 +10206,20 @@ textarea.form-control {
   .project-logo-row { gap: 6px; }
   .tech-logo-chip { font-size: 9px; padding: 4px 7px; }
 }
+
+.experience-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 10px 0 14px;
+}
+.experience-tech-row .tech-logo-chip {
+  min-height: 27px;
+  padding: 3px 7px;
+  background: #f8faff;
+  font-size: 9px;
+}
+.experience-tech-row .tech-logo-chip img {
+  width: 17px;
+  height: 17px;
+}
