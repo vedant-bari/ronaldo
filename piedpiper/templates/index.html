@@ -86,20 +86,39 @@
 			</div>
 		</div>
 	</nav>
-	<section class="hero-wrap js-fullheight portfolio-hero" id="home-section">
-<div class="overlay"></div><div class="container"><div class="row no-gutters slider-text js-fullheight align-items-center">
-<div class="col-lg-6 col-md-6 ftco-animate d-flex align-items-center"><div class="text portfolio-hero-copy">
-<span class="subheading">Cloud Architecture · Platform Engineering · SRE</span><h1>Vedant Bari</h1><h2>Building secure, scalable cloud platforms</h2>
-<p>Designing and operating cloud-native infrastructure across AWS, Google Cloud and Azure with Kubernetes, Terraform and modern DevOps practices.</p>
-<div class="portfolio-hero-actions"><a href="#projects-section" class="btn btn-primary py-3 px-4">Explore Projects <span aria-hidden="true">→</span></a><a href="{% static 'pdf/VedantBariResume-4.pdf' %}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary py-3 px-4">Download CV</a></div>
-<div class="hero-specialties"><span>AWS · GCP · Azure</span><span>Kubernetes</span><span>Terraform</span><span>Observability</span></div></div></div>
-<div class="col-lg-6 col-md-6 ftco-animate"><div class="hero-architecture-art"><img src="{% static 'images/cloud-architecture.svg' %}" alt="Cloud architecture connecting infrastructure as code, Kubernetes, observability, networking, security and CI/CD" fetchpriority="high"><span class="hero-art-caption">Multi-cloud platform architecture</span></div></div>
-</div></div><div class="mouse"><a href="#about-section" class="mouse-icon" aria-label="Scroll to About"><div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div></a></div></section>
+	<section class="hero-wrap js-fullheight" id="home-section">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+				<div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+					<div class="text text-center">
+						<span class="subheading">Hey! I am</span>
+						<h1>Vedant Bari</h1>
+						<h2>I'm a
+							<span class="txt-rotate" data-period="2000"
+								data-rotate='[ "Cloud Solutions Architect.", "Senior DevOps / Cloud Engineer.", "Site Reliability Engineer." ]'></span>
+						</h2>
+					</div>				</div>
+			</div>
+		</div>
+		</div>
+		<div class="mouse">
+			<a href="#" class="mouse-icon">
+				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+			</a>
+		</div>
+	</section>
+
 	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
 		<div class="container">
 			<div class="row d-flex no-gutters">
 				<div class="col-md-6 col-lg-6 d-flex">
-					<div class="about-architecture-visual"><img src="{% static 'images/cloud-architecture.svg' %}" alt="Connected cloud-native platform architecture" loading="lazy" decoding="async"><div class="about-visual-note"><span class="about-visual-dot"></span> Architecture-led engineering</div></div>
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay"></div>
+						<div class="img d-flex align-self-stretch align-items-center"
+							style="background-image:url('{% static 'images/about.jpg' %}');">
+						</div>
+					</div>
 				</div>
 				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
 					<div class="row justify-content-start pb-3">
@@ -464,14 +483,45 @@
 	    				</div> -->
 							</div>
 
-							<div id="page-5" class="page four certification-showcase">
-<h2 class="heading">Certifications</h2><p class="certification-intro">Industry-recognized credentials across cloud architecture, application development and Kubernetes.</p>
-<div class="certification-grid">
-<article class="cert-badge cert-badge-aws"><div class="cert-badge-top"><span class="cert-provider-mark"><img src="{% static 'images/aws-service.png' %}" alt="AWS" loading="lazy" decoding="async"></span><span class="cert-ribbon">ASSOCIATE</span></div><h3>AWS Certified</h3><p>Solutions Architect</p><span class="cert-badge-footer">Amazon Web Services</span></article>
-<article class="cert-badge cert-badge-aws"><div class="cert-badge-top"><span class="cert-provider-mark"><img src="{% static 'images/aws-service.png' %}" alt="AWS" loading="lazy" decoding="async"></span><span class="cert-ribbon">ASSOCIATE</span></div><h3>AWS Certified</h3><p>Developer</p><span class="cert-badge-footer">Amazon Web Services</span></article>
-<article class="cert-badge cert-badge-google"><div class="cert-badge-top"><span class="cert-provider-mark"><img src="{% static 'images/google_cloud.png' %}" alt="Google Cloud" loading="lazy" decoding="async"></span><span class="cert-ribbon">PROFESSIONAL</span></div><h3>Google Cloud</h3><p>Professional Cloud Architect</p><span class="cert-badge-footer">Google Cloud</span></article>
-<article class="cert-badge cert-badge-kubernetes"><div class="cert-badge-top"><span class="cert-provider-mark"><img src="{% static 'images/kubernetes.png' %}" alt="Kubernetes" loading="lazy" decoding="async"></span><span class="cert-ribbon">CERTIFIED</span></div><h3>CKAD</h3><p>Certified Kubernetes Application Developer</p><span class="cert-badge-footer">Cloud Native Computing Foundation</span></article>
-</div></div>
+							<div id="page-5" class="page four">
+								<h2 class="heading">Certifications</h2>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<h2>AWS Certified Solutions Architect – Associate</h2>
+										<div class="certification-mark"><img src="{% static 'images/aws-service.png' %}" alt="" loading="lazy" decoding="async"></div><span class="position">Amazon Web Services</span>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<h2>AWS Certified Developer – Associate</h2>
+										<div class="certification-mark"><img src="{% static 'images/aws-service.png' %}" alt="" loading="lazy" decoding="async"></div><span class="position">Amazon Web Services</span>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<h2>Google Cloud Professional Cloud Architect</h2>
+										<div class="certification-mark"><img src="{% static 'images/google_cloud.png' %}" alt="" loading="lazy" decoding="async"></div><span class="position">Google Cloud</span>
+									</div>
+								</div>
+								<div class="resume-wrap d-flex ftco-animate">
+									<div class="icon d-flex align-items-center justify-content-center">
+										<span class="flaticon-ideas"></span>
+									</div>
+									<div class="text pl-3">
+										<h2>Certified Kubernetes Application Developer (CKAD)</h2>
+										<div class="certification-mark"><img src="{% static 'images/kubernetes.png' %}" alt="" loading="lazy" decoding="async"></div><span class="position">Cloud Native Computing Foundation (CNCF)</span>
+									</div>
+								</div>
+							</div>
 						</div>
 				</div>
 	</section>
