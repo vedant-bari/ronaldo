@@ -9962,3 +9962,188 @@ textarea.form-control {
     margin-top: 3px;
   }
 }
+
+
+/* Engineering capabilities: clear, expandable service cards */
+.engineering-capabilities {
+  background: #f8f9fc;
+}
+.engineering-capabilities .heading-section > p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.engineering-capabilities .capabilities-intro {
+  color: #788294;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.capability-card {
+  width: 100%;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  padding: 28px 25px 24px;
+  background: #fff;
+  border: 1px solid #e9edf4;
+  border-radius: 9px;
+  box-shadow: 0 8px 28px rgba(25, 42, 75, .045);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.capability-card:hover {
+  transform: translateY(-4px);
+  border-color: #d7def2;
+  box-shadow: 0 13px 32px rgba(25, 42, 75, .09);
+}
+.capability-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 17px;
+  border-radius: 10px;
+  background: #f0f3ff;
+  color: #3e64ff;
+  font-size: 23px;
+}
+.capability-number {
+  display: block;
+  margin-bottom: 8px;
+  color: #8791a4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.25px;
+}
+.capability-card h3 {
+  min-height: 52px;
+  margin-bottom: 12px;
+  color: #222b3a;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.capability-card > p {
+  min-height: 78px;
+  margin-bottom: 17px;
+  color: #697386;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.capability-details {
+  border-top: 1px solid #edf0f5;
+}
+.capability-details summary {
+  position: relative;
+  padding: 14px 24px 0 0;
+  color: #3e64ff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  list-style: none;
+}
+.capability-details summary::-webkit-details-marker { display: none; }
+.capability-details summary:after {
+  content: "+";
+  position: absolute;
+  right: 2px;
+  top: 8px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.capability-details[open] summary:after { content: "−"; }
+.capability-details summary:focus-visible {
+  outline: 3px solid #3e64ff;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.capability-detail-content {
+  padding-top: 14px;
+  color: #657084;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.capability-detail-content strong {
+  display: block;
+  margin: 7px 0 5px;
+  color: #30394a;
+  font-size: 12px;
+}
+.capability-detail-content ul {
+  padding-left: 18px;
+  margin: 0 0 12px;
+}
+.capability-detail-content li { margin-bottom: 4px; }
+.capability-detail-content .capability-tags {
+  margin: 0;
+  color: #3e64ff;
+  font-size: 11px;
+  font-weight: 600;
+}
+.capability-outcomes {
+  margin: 12px 0 42px;
+  padding: 28px 30px 18px;
+  border: 1px solid #e6eaf2;
+  border-radius: 9px;
+  background: #fff;
+}
+.capability-outcomes-kicker {
+  color: #8791a4;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+.capability-outcomes h3 {
+  margin: 7px 0 0;
+  color: #252e3d;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.outcome-stat strong {
+  display: block;
+  color: #3e64ff;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.outcome-stat span {
+  display: block;
+  max-width: 210px;
+  margin: 7px auto 0;
+  color: #697386;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.outcome-note {
+  margin: 18px 0 0;
+  color: #8992a2;
+  font-size: 10px;
+  text-align: center;
+}
+.capability-cta { padding: 5px 0 20px; }
+.capability-cta h3 {
+  color: #222b3a;
+  font-size: 22px;
+  font-weight: 600;
+}
+.capability-cta p {
+  color: #697386;
+  font-size: 13px;
+}
+@media (max-width: 767.98px) {
+  .capability-card {
+    height: auto;
+    margin-bottom: 20px;
+    padding: 23px 21px;
+  }
+  .capability-card h3,
+  .capability-card > p { min-height: 0; }
+  .capability-outcomes { padding: 22px 17px 15px; }
+  .capability-outcomes h3 { margin-bottom: 20px; }
+  .outcome-stat strong { font-size: 29px; }
+  .outcome-stat span { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .capability-card { transition: none; }
+  .capability-card:hover { transform: none; }
+}
