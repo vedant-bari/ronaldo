@@ -9672,3 +9672,82 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+/* Portfolio modernization: focused visual and accessibility refinements */
+.services-1 {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 40px);
+  transition: background-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.services-1 .desc {
+  flex: 1 1 auto;
+}
+.services-1 .desc h3 {
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: 1px;
+}
+.services-1 .desc p {
+  line-height: 1.75;
+}
+.services-1:focus-visible,
+.project a:focus-visible,
+.ftco-footer a:focus-visible,
+#ftco-navbar a:focus-visible,
+#navi a:focus-visible,
+#contact-section input:focus-visible,
+#contact-section textarea:focus-visible {
+  outline: 3px solid #3e64ff;
+  outline-offset: 3px;
+}
+#resume-section .resume-wrap .text ul {
+  padding-left: 1.2rem;
+  margin-top: .75rem;
+  margin-bottom: 0;
+}
+#resume-section .resume-wrap .text ul li {
+  line-height: 1.7;
+  margin-bottom: .35rem;
+}
+#resume-section .resume-wrap .text ul li:last-child {
+  margin-bottom: 0;
+}
+#resume-section .page {
+  scroll-margin-top: 6rem;
+}
+#projects-section .project {
+  overflow: hidden;
+}
+#contact-section .contact-form .form-control {
+  min-height: 50px;
+}
+#contact-section .contact-form textarea.form-control {
+  min-height: 180px;
+}
+@media (max-width: 767.98px) {
+  .services-1 {
+    height: auto;
+    padding: 1.5rem;
+  }
+  .services-1 .desc h3 {
+    min-height: 0;
+  }
+  .ftco-footer {
+    padding: 4rem 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
