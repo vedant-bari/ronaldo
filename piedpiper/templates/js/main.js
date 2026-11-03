@@ -1,6 +1,7 @@
  AOS.init({
  	duration: 800,
- 	easing: 'slide'
+ 	easing: 'slide',
+ 	disable: window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
  });
 
 (function($) {
@@ -70,12 +71,20 @@
 	    event.preventDefault();
 
 	    var href = $.attr(this, 'href');
+	    var $target = $(href);
+
+	    if (!$target.length) {
+	        return;
+	    }
 
 	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
+	        scrollTop: $target.offset().top - 70
+	    }, 500);
+
+	    // Close the collapsed navigation after selecting a section on mobile.
+	    if ($('#ftco-nav').hasClass('show')) {
+	        $('#ftco-nav').collapse('hide');
+	    }
 		});
 
 	};
@@ -130,7 +139,7 @@
 
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
-	  console.log('show');
+	  
 	});
 
 	// scroll
@@ -185,7 +194,7 @@
 				$('.number').each(function(){
 					var $this = $(this),
 						num = $this.data('number');
-						console.log(num);
+						
 					$this.animateNumber(
 					  {
 					    number: num,
