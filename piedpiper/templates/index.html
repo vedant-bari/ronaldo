@@ -159,15 +159,15 @@
           <div class="project-card-grid">
             <div class="project-description"><h3>AWS EKS<br>Infrastructure Blueprint</h3><p>A reusable Terraform and Terragrunt foundation for provisioning Kubernetes infrastructure on AWS, with secure state management and operational integrations.</p><div class="tag-list"><span>AWS</span><span>EKS</span><span>Terraform</span><span>Terragrunt</span><span>GitOps</span></div></div>
             <div class="diagram-wrap">
-              <svg class="architecture-diagram" viewBox="0 0 620 250" role="img" aria-labelledby="eks-diagram-title eks-diagram-desc">
+              <svg class="architecture-diagram architecture-diagram-aws" viewBox="0 0 620 250" role="img" aria-labelledby="eks-diagram-title eks-diagram-desc">
                 <title id="eks-diagram-title">AWS EKS infrastructure architecture</title><desc id="eks-diagram-desc">Configuration and Terraform flow into encrypted remote state and AWS networking, then into an EKS cluster with security, delivery, ingress and operations integrations.</desc>
                 <g class="diagram-lines"><path d="M310 48 V82 M310 119 V151 M310 188 V211 M310 211 H100 V229 M310 211 H255 V229 M310 211 H465 V229"/></g>
-                <g class="diagram-node"><rect x="220" y="8" width="180" height="40" rx="5"/><text x="310" y="25" text-anchor="middle">CONFIGURATION</text><text class="diagram-small" x="310" y="38" text-anchor="middle">YAML · Terraform · Terragrunt</text></g>
-                <g class="diagram-node"><rect x="220" y="82" width="180" height="37" rx="5"/><text x="310" y="105" text-anchor="middle">REMOTE STATE · S3 / KMS</text></g>
-                <g class="diagram-node diagram-node-strong"><rect x="220" y="151" width="180" height="37" rx="5"/><text x="310" y="174" text-anchor="middle">AWS VPC + AMAZON EKS</text></g>
-                <g class="diagram-node"><rect x="18" y="211" width="164" height="35" rx="5"/><text x="100" y="232" text-anchor="middle">IAM · SECRETS · CSI</text></g>
-                <g class="diagram-node"><rect x="185" y="211" width="140" height="35" rx="5"/><text x="255" y="232" text-anchor="middle">ECR · JENKINS · ARGO CD</text></g>
-                <g class="diagram-node"><rect x="395" y="211" width="140" height="35" rx="5"/><text x="465" y="232" text-anchor="middle">ALB · DNS · KARPENTER</text></g>
+                <g class="diagram-node diagram-node-config"><rect x="220" y="8" width="180" height="40" rx="5"/><rect class="diagram-accent" x="220" y="8" width="4" height="40" rx="2"/><text x="310" y="25" text-anchor="middle">CONFIGURATION</text><text class="diagram-small" x="310" y="38" text-anchor="middle">YAML · Terraform · Terragrunt</text></g>
+                <g class="diagram-node diagram-node-state"><rect x="220" y="82" width="180" height="37" rx="5"/><rect class="diagram-accent" x="220" y="82" width="4" height="37" rx="2"/><text x="310" y="105" text-anchor="middle">REMOTE STATE · S3 / KMS</text></g>
+                <g class="diagram-node diagram-node-strong diagram-node-platform"><rect x="220" y="151" width="180" height="37" rx="5"/><rect class="diagram-accent" x="220" y="151" width="4" height="37" rx="2"/><text x="310" y="174" text-anchor="middle">AWS VPC + AMAZON EKS</text></g>
+                <g class="diagram-node diagram-node-integration"><rect x="18" y="211" width="164" height="35" rx="5"/><rect class="diagram-accent" x="18" y="211" width="4" height="35" rx="2"/><text x="100" y="232" text-anchor="middle">IAM · SECRETS · CSI</text></g>
+                <g class="diagram-node diagram-node-integration"><rect x="185" y="211" width="140" height="35" rx="5"/><rect class="diagram-accent" x="185" y="211" width="4" height="35" rx="2"/><text x="255" y="232" text-anchor="middle">ECR · JENKINS · ARGO CD</text></g>
+                <g class="diagram-node diagram-node-integration"><rect x="395" y="211" width="140" height="35" rx="5"/><rect class="diagram-accent" x="395" y="211" width="4" height="35" rx="2"/><text x="465" y="232" text-anchor="middle">ALB · DNS · KARPENTER</text></g>
               </svg>
               <p class="diagram-caption">Simplified architecture view · Select the repository for implementation details.</p>
             </div>
