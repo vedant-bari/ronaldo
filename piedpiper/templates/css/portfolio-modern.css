@@ -319,3 +319,190 @@ button, input, textarea { font: inherit; }
   .contact-form input, .contact-form textarea { font-size: 15px; }
   .footer-inner p, .footer-inner > a:last-child { font-size: 11px; }
 }
+
+
+/* Professional journey: stronger section identity and milestone layout */
+.experience-section {
+  position: relative;
+  overflow: hidden;
+  background: #eef1f2;
+}
+.experience-section::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, #315d83 0 18%, #b8c8d1 18% 100%);
+}
+.experience-section > .container {
+  position: relative;
+  z-index: 1;
+}
+.experience-section .section-topline {
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+.experience-section .section-topline h2 {
+  max-width: 560px;
+}
+.experience-section .section-intro {
+  max-width: 390px;
+  color: #596773;
+}
+.experience-section .timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  border: 0;
+}
+.experience-section .timeline::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  bottom: 23px;
+  left: 209px;
+  width: 1px;
+  background: #b9c7ce;
+}
+.experience-section .timeline-item {
+  position: relative;
+  grid-template-columns: 185px minmax(0, 1fr);
+  gap: 50px;
+  padding: 27px 30px 29px 0;
+  border: 1px solid #d9e0e2;
+  border-radius: 5px;
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 3px 12px rgba(30, 48, 60, .035);
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.experience-section .timeline-item:hover {
+  border-color: #b8c9d2;
+  box-shadow: 0 8px 22px rgba(30, 48, 60, .07);
+  transform: translateY(-2px);
+}
+.experience-section .timeline-date {
+  position: relative;
+  padding: 6px 0 0 25px;
+  color: #315d83;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+}
+.experience-section .timeline-date::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: -31px;
+  width: 11px;
+  height: 11px;
+  border: 3px solid #eef1f2;
+  border-radius: 50%;
+  background: #315d83;
+  box-shadow: 0 0 0 1px #9db1bd;
+}
+.experience-section .timeline-main {
+  min-width: 0;
+}
+.experience-section .timeline-title {
+  padding-bottom: 13px;
+  border-bottom: 1px solid #e7ebed;
+}
+.experience-section .timeline-title h3 {
+  color: #202a34;
+  font-size: 23px;
+}
+.experience-section .company {
+  margin-top: 6px;
+  margin-bottom: 0;
+  color: #3f596b;
+  font-size: 14px;
+}
+.experience-section .company span {
+  color: #7b8790;
+}
+.experience-section .timeline-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dce3e6;
+  border-radius: 50%;
+  color: #617584;
+  background: #f7f9f9;
+}
+.experience-section .timeline-main > p {
+  margin-top: 15px;
+  color: #56636d;
+}
+.experience-section .experience-highlights {
+  margin-top: 12px;
+  color: #47545e;
+}
+.experience-section .experience-highlights li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.experience-section .experience-highlights li::marker {
+  color: #527895;
+}
+.experience-section .tag-list {
+  padding-top: 13px;
+  border-top: 1px solid #edf0f1;
+}
+.experience-section .tag-list span {
+  border-color: #dce4e7;
+  background: #f5f8f8;
+  color: #526574;
+}
+.experience-section .education-note {
+  margin-top: 26px;
+  padding: 22px 25px;
+  border: 1px solid #d9e0e2;
+  border-radius: 4px;
+  background: rgba(255,255,255,.62);
+}
+@media (max-width: 900px) and (min-width: 681px) {
+  .experience-section .timeline::before { left: 155px; }
+  .experience-section .timeline-item {
+    grid-template-columns: 132px minmax(0, 1fr);
+    gap: 40px;
+  }
+  .experience-section .timeline-date { padding-left: 18px; }
+  .experience-section .timeline-date::after { right: -26px; }
+}
+@media (max-width: 680px) {
+  .experience-section { background: #eef1f2; }
+  .experience-section .section-topline { margin-bottom: 30px; }
+  .experience-section .timeline { gap: 14px; }
+  .experience-section .timeline::before {
+    top: 22px;
+    bottom: 22px;
+    left: 16px;
+  }
+  .experience-section .timeline-item {
+    display: block;
+    padding: 19px 16px 20px 34px;
+    border-radius: 4px;
+  }
+  .experience-section .timeline-date {
+    padding: 0 0 12px;
+    font-size: 10px;
+  }
+  .experience-section .timeline-date::after {
+    top: 0;
+    left: -23px;
+    right: auto;
+    width: 9px;
+    height: 9px;
+  }
+  .experience-section .timeline-title h3 { font-size: 20px; }
+  .experience-section .timeline-number { width: 29px; height: 29px; }
+  .experience-section .education-note {
+    margin-top: 18px;
+    padding: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .experience-section .timeline-item { transition: none; }
+}
