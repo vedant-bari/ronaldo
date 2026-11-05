@@ -255,3 +255,35 @@ button, input, textarea { font: inherit; }
     font-size: 14px;
   }
 }
+
+
+/* AWS EKS project diagram: layered architecture treatment */
+.architecture-diagram-eks { min-width: 0; }
+.eks-flow-lines, .eks-state-link, .eks-ingress-link, .eks-control-link {
+  fill: none;
+  stroke: #9aadb8;
+  stroke-width: 1.5;
+  stroke-dasharray: 3 4;
+}
+.eks-state-link { stroke: #aab8bf; }
+.eks-control-link { stroke: #8fa5b1; }
+.eks-ingress-link { stroke: #7895a6; stroke-dasharray: none; }
+.eks-region { fill: #f8faf9; stroke: #cbd5d8; stroke-width: 1.2; }
+.eks-vpc { fill: #fff; stroke: #9eafb7; stroke-width: 1.2; stroke-dasharray: 5 4; }
+.eks-boundary-label { fill: #71808a; font: 500 9px var(--mono); letter-spacing: .08em; }
+.eks-subnet rect:first-child { fill: #f7f9f8; stroke: #d4dcde; stroke-width: 1; }
+.eks-public rect:first-child { fill: #f5f7f7; stroke: #cbd5d8; }
+.eks-subnet-label { fill: #78858c; font: 500 8px var(--mono); letter-spacing: .04em; }
+.eks-inner-node { fill: #fff; stroke: #b9c8ce; stroke-width: 1; }
+.eks-pod { fill: #edf2f3; stroke: #c3d1d5; stroke-width: 1; }
+.eks-node-title { fill: #3c4b54; font: 600 9px var(--sans); }
+.eks-tool rect { fill: #fff; stroke: #cbd5d8; }
+.eks-tool-accent rect { fill: #edf2f4; stroke: #9eb1bb; }
+.eks-state rect { fill: #f4f6f5; stroke: #d1d9da; }
+.eks-control rect { fill: #eaf0f2; stroke: #8fa7b3; stroke-width: 1.2; }
+.eks-integration rect { fill: #fff; stroke: #d3dcde; }
+.architecture-diagram-eks .diagram-node text { font-size: 9px; }
+.architecture-diagram-eks .diagram-node .diagram-small { font-size: 7px; }
+@media (max-width: 680px) {
+  .architecture-diagram-eks { min-width: 650px; }
+}
