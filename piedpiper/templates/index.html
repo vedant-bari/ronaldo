@@ -149,122 +149,17 @@
           <div class="project-card-grid">
             <div class="project-description"><h3>AWS EKS<br>Infrastructure Blueprint</h3><p>A reusable Terraform and Terragrunt foundation for provisioning Kubernetes infrastructure on AWS, with secure state management and operational integrations.</p><div class="tag-list"><span>AWS</span><span>EKS</span><span>Terraform</span><span>Terragrunt</span><span>GitOps</span></div></div>
             <div class="diagram-wrap">
-              <svg class="architecture-diagram architecture-diagram-eks" viewBox="0 0 760 500" role="img" aria-labelledby="eks-diagram-title eks-diagram-desc">
-                <title id="eks-diagram-title">AWS EKS platform architecture across three availability zones</title>
-                <desc id="eks-diagram-desc">A Git-based delivery workflow uses Jenkins and Terraform with Terragrunt. Encrypted S3 state and DynamoDB locking support provisioning. An AWS region contains an EKS managed control plane and a VPC with a public load balancer subnet and private worker subnets across three availability zones. Platform integrations include ECR, workload identity and secrets, GitOps, DNS, autoscaling and observability.</desc>
-
-                <g class="eks-flow-lines">
-                  <path d="M174 43 H202 M364 43 H392"/>
-                  <path d="M475 68 V86"/>
-                  <path d="M475 126 V146"/>
-                  <path d="M380 188 V208"/>
-                  <path d="M112 260 H220 M112 260 H304 M112 260 H474"/>
-                  <path d="M295 350 V378 M465 350 V378 M635 350 V378"/>
-                </g>
-
-                <g class="diagram-node eks-tool">
-                  <rect x="12" y="15" width="162" height="54" rx="5"/>
-                  <text x="93" y="37" text-anchor="middle">SOURCE</text>
-                  <text class="diagram-small" x="93" y="53" text-anchor="middle">Git repository</text>
-                </g>
-                <g class="diagram-node eks-tool">
-                  <rect x="202" y="15" width="162" height="54" rx="5"/>
-                  <text x="283" y="37" text-anchor="middle">DELIVERY</text>
-                  <text class="diagram-small" x="283" y="53" text-anchor="middle">Jenkins pipeline</text>
-                </g>
-                <g class="diagram-node eks-tool eks-tool-accent">
-                  <rect x="392" y="15" width="166" height="54" rx="5"/>
-                  <text x="475" y="37" text-anchor="middle">PROVISIONING</text>
-                  <text class="diagram-small" x="475" y="53" text-anchor="middle">Terraform · Terragrunt</text>
-                </g>
-                <g class="diagram-node eks-state">
-                  <rect x="582" y="15" width="166" height="54" rx="5"/>
-                  <text x="665" y="36" text-anchor="middle">REMOTE STATE</text>
-                  <text class="diagram-small" x="665" y="52" text-anchor="middle">S3 · KMS · DynamoDB lock</text>
-                </g>
-                <path class="eks-state-link" d="M558 42 H582"/>
-
-                <rect class="eks-region" x="12" y="91" width="736" height="294" rx="8"/>
-                <text class="eks-boundary-label" x="28" y="110">AWS REGION</text>
-                <g class="diagram-node eks-control">
-                  <rect x="260" y="119" width="240" height="48" rx="5"/>
-                  <text x="380" y="139" text-anchor="middle">AMAZON EKS</text>
-                  <text class="diagram-small" x="380" y="154" text-anchor="middle">AWS-managed control plane</text>
-                </g>
-                <rect class="eks-vpc" x="27" y="181" width="706" height="188" rx="6"/>
-                <text class="eks-boundary-label" x="43" y="199">VPC · PRIVATE WORKLOAD NETWORK</text>
-
-                <g class="eks-subnet eks-public">
-                  <rect x="43" y="211" width="145" height="141" rx="5"/>
-                  <text class="eks-subnet-label" x="115" y="229" text-anchor="middle">PUBLIC SUBNETS</text>
-                  <rect class="eks-inner-node" x="56" y="243" width="119" height="42" rx="4"/>
-                  <text class="eks-node-title" x="115" y="260" text-anchor="middle">Application</text>
-                  <text class="eks-node-title" x="115" y="273" text-anchor="middle">Load Balancer</text>
-                  <text class="diagram-small" x="115" y="307" text-anchor="middle">Ingress entry point</text>
-                  <text class="diagram-small" x="115" y="322" text-anchor="middle">Internet-facing</text>
-                </g>
-
-                <g class="eks-subnet">
-                  <rect x="204" y="211" width="158" height="141" rx="5"/>
-                  <text class="eks-subnet-label" x="283" y="229" text-anchor="middle">PRIVATE · AZ A</text>
-                  <rect class="eks-inner-node" x="218" y="243" width="130" height="42" rx="4"/>
-                  <text class="eks-node-title" x="283" y="260" text-anchor="middle">Worker nodes</text>
-                  <text class="diagram-small" x="283" y="274" text-anchor="middle">Bottlerocket</text>
-                  <rect class="eks-pod" x="218" y="294" width="130" height="39" rx="4"/>
-                  <text class="diagram-small" x="283" y="309" text-anchor="middle">Application pods</text>
-                  <text class="diagram-small" x="283" y="322" text-anchor="middle">EKS workloads</text>
-                </g>
-                <g class="eks-subnet">
-                  <rect x="381" y="211" width="158" height="141" rx="5"/>
-                  <text class="eks-subnet-label" x="460" y="229" text-anchor="middle">PRIVATE · AZ B</text>
-                  <rect class="eks-inner-node" x="395" y="243" width="130" height="42" rx="4"/>
-                  <text class="eks-node-title" x="460" y="260" text-anchor="middle">Worker nodes</text>
-                  <text class="diagram-small" x="460" y="274" text-anchor="middle">Bottlerocket</text>
-                  <rect class="eks-pod" x="395" y="294" width="130" height="39" rx="4"/>
-                  <text class="diagram-small" x="460" y="309" text-anchor="middle">Application pods</text>
-                  <text class="diagram-small" x="460" y="322" text-anchor="middle">EKS workloads</text>
-                </g>
-                <g class="eks-subnet">
-                  <rect x="558" y="211" width="158" height="141" rx="5"/>
-                  <text class="eks-subnet-label" x="637" y="229" text-anchor="middle">PRIVATE · AZ C</text>
-                  <rect class="eks-inner-node" x="572" y="243" width="130" height="42" rx="4"/>
-                  <text class="eks-node-title" x="637" y="260" text-anchor="middle">Worker nodes</text>
-                  <text class="diagram-small" x="637" y="274" text-anchor="middle">Bottlerocket</text>
-                  <rect class="eks-pod" x="572" y="294" width="130" height="39" rx="4"/>
-                  <text class="diagram-small" x="637" y="309" text-anchor="middle">Application pods</text>
-                  <text class="diagram-small" x="637" y="322" text-anchor="middle">EKS workloads</text>
-                </g>
-                <path class="eks-ingress-link" d="M188 264 H204"/>
-                <path class="eks-control-link" d="M283 167 V181 M460 167 V181"/>
-
-                <text class="eks-boundary-label" x="14" y="409">PLATFORM INTEGRATIONS</text>
-                <g class="diagram-node eks-integration">
-                  <rect x="12" y="421" width="136" height="54" rx="5"/>
-                  <text x="80" y="443" text-anchor="middle">IMAGE REGISTRY</text>
-                  <text class="diagram-small" x="80" y="459" text-anchor="middle">Amazon ECR</text>
-                </g>
-                <g class="diagram-node eks-integration">
-                  <rect x="160" y="421" width="136" height="54" rx="5"/>
-                  <text x="228" y="443" text-anchor="middle">IDENTITY &amp; SECRETS</text>
-                  <text class="diagram-small" x="228" y="459" text-anchor="middle">IAM · Vault · CSI</text>
-                </g>
-                <g class="diagram-node eks-integration">
-                  <rect x="308" y="421" width="136" height="54" rx="5"/>
-                  <text x="376" y="443" text-anchor="middle">DELIVERY</text>
-                  <text class="diagram-small" x="376" y="459" text-anchor="middle">Argo CD · Jenkins</text>
-                </g>
-                <g class="diagram-node eks-integration">
-                  <rect x="456" y="421" width="136" height="54" rx="5"/>
-                  <text x="524" y="443" text-anchor="middle">INGRESS &amp; SCALE</text>
-                  <text class="diagram-small" x="524" y="459" text-anchor="middle">ALB · DNS · Karpenter</text>
-                </g>
-                <g class="diagram-node eks-integration">
-                  <rect x="604" y="421" width="144" height="54" rx="5"/>
-                  <text x="676" y="443" text-anchor="middle">OBSERVABILITY</text>
-                  <text class="diagram-small" x="676" y="459" text-anchor="middle">CloudWatch · Loki</text>
-                </g>
+              <svg class="architecture-diagram" viewBox="0 0 620 250" role="img" aria-labelledby="eks-diagram-title eks-diagram-desc">
+                <title id="eks-diagram-title">AWS EKS infrastructure architecture</title><desc id="eks-diagram-desc">Configuration and Terraform flow into encrypted remote state and AWS networking, then into an EKS cluster with security, delivery, ingress and operations integrations.</desc>
+                <g class="diagram-lines"><path d="M310 48 V82 M310 119 V151 M310 188 V211 M310 211 H100 V229 M310 211 H255 V229 M310 211 H465 V229"/></g>
+                <g class="diagram-node"><rect x="220" y="8" width="180" height="40" rx="5"/><text x="310" y="25" text-anchor="middle">CONFIGURATION</text><text class="diagram-small" x="310" y="38" text-anchor="middle">YAML · Terraform · Terragrunt</text></g>
+                <g class="diagram-node"><rect x="220" y="82" width="180" height="37" rx="5"/><text x="310" y="105" text-anchor="middle">REMOTE STATE · S3 / KMS</text></g>
+                <g class="diagram-node diagram-node-strong"><rect x="220" y="151" width="180" height="37" rx="5"/><text x="310" y="174" text-anchor="middle">AWS VPC + AMAZON EKS</text></g>
+                <g class="diagram-node"><rect x="18" y="211" width="164" height="35" rx="5"/><text x="100" y="232" text-anchor="middle">IAM · SECRETS · CSI</text></g>
+                <g class="diagram-node"><rect x="185" y="211" width="140" height="35" rx="5"/><text x="255" y="232" text-anchor="middle">ECR · JENKINS · ARGO CD</text></g>
+                <g class="diagram-node"><rect x="395" y="211" width="140" height="35" rx="5"/><text x="465" y="232" text-anchor="middle">ALB · DNS · KARPENTER</text></g>
               </svg>
-              <p class="diagram-caption">Reference architecture based on the public Terraform EKS blueprint · Select the repository for implementation details.</p>
+              <p class="diagram-caption">Simplified architecture view · Select the repository for implementation details.</p>
             </div>
           </div>
         </article>
