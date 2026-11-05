@@ -796,3 +796,36 @@ button, input, textarea { font: inherit; }
     transition: none;
   }
 }
+
+
+/* AWS EKS diagram: restrained visual grouping without adding diagram density */
+.architecture-diagram-aws .diagram-lines path {
+  stroke: #9eafba;
+  stroke-width: 1.6;
+  stroke-dasharray: 2 4;
+}
+.architecture-diagram-aws .diagram-node rect:not(.diagram-accent) {
+  fill: #fbfcfc;
+  stroke: #d1dadd;
+}
+.architecture-diagram-aws .diagram-node-config rect:not(.diagram-accent) {
+  fill: #f7f9fa;
+}
+.architecture-diagram-aws .diagram-node-state rect:not(.diagram-accent) {
+  fill: #f5f7f6;
+}
+.architecture-diagram-aws .diagram-node-platform rect:not(.diagram-accent) {
+  fill: #eaf1f4;
+  stroke: #91a9b6;
+}
+.architecture-diagram-aws .diagram-node-integration rect:not(.diagram-accent) {
+  fill: #fff;
+  stroke: #d9e1e3;
+}
+.architecture-diagram-aws .diagram-node .diagram-accent {
+  fill: #d18a42;
+  stroke: none;
+}
+.architecture-diagram-aws .diagram-node-platform .diagram-accent {
+  fill: #315d83;
+}
