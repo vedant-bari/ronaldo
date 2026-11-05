@@ -256,3 +256,66 @@ button, input, textarea { font: inherit; }
   }
 }
 
+
+
+/* Readability pass: increase text sizes while retaining the existing visual system */
+@media (min-width: 681px) {
+  body { font-size: 16px; }
+  .primary-nav a { font-size: 13px; }
+  .eyebrow, .section-index, .project-index, .timeline-date, .expertise-number, .cert-provider { font-size: 11px; }
+  .hero-intro { font-size: 19px; }
+  .text-link, .button { font-size: 13px; }
+  .about-copy p { font-size: 16px; }
+  .about-copy .lead-copy { font-size: 20px; }
+  .metric span { font-size: 13px; }
+  .about-meta { font-size: 13px; }
+  .section-intro { font-size: 15px; }
+  .timeline-date { font-size: 11px; }
+  .timeline-title h3 { font-size: 23px; }
+  .company { font-size: 14px; }
+  .timeline-main > p { font-size: 15px; }
+  .experience-highlights { font-size: 14px; line-height: 1.8; }
+  .tag-list span { font-size: 11px; }
+  .education-note p { font-size: 14px; }
+  .project-index, .work-label { font-size: 11px; }
+  .project-description p { font-size: 14px; }
+  .diagram-caption { font-size: 11px; }
+  .expertise-grid h3 { font-size: 16px; }
+  .expertise-grid p { font-size: 13px; }
+  .certification-list h3 { font-size: 16px; }
+  .certification-list p { font-size: 13px; }
+  .contact-copy > p { font-size: 15px; }
+  .contact-links a, .contact-form label { font-size: 13px; }
+  .contact-form input, .contact-form textarea { font-size: 15px; }
+  .footer-inner p, .footer-inner > a:last-child { font-size: 12px; }
+}
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .primary-nav a { font-size: 14px; }
+  .eyebrow, .section-index, .project-index, .timeline-date, .expertise-number, .cert-provider { font-size: 10px; }
+  .hero-intro { font-size: 17px; line-height: 1.7; }
+  .about-copy p { font-size: 15px; line-height: 1.8; }
+  .about-copy .lead-copy { font-size: 18px; }
+  .metric span { font-size: 13px; }
+  .about-meta { font-size: 13px; }
+  .section-intro { font-size: 14px; line-height: 1.75; }
+  .timeline-date { font-size: 10px; }
+  .timeline-title h3 { font-size: 21px; }
+  .company { font-size: 14px; }
+  .timeline-main > p { font-size: 15px; line-height: 1.8; }
+  .experience-highlights { font-size: 14px; line-height: 1.8; }
+  .experience-highlights li { padding-top: 4px; padding-bottom: 4px; }
+  .tag-list span { font-size: 10px; }
+  .education-note p { font-size: 13px; line-height: 1.75; }
+  .project-index, .work-label { font-size: 10px; }
+  .project-description p { font-size: 14px; line-height: 1.8; }
+  .diagram-caption { font-size: 10px; }
+  .expertise-grid h3 { font-size: 14px; }
+  .expertise-grid p { font-size: 12px; line-height: 1.8; }
+  .certification-list h3 { font-size: 14px; }
+  .certification-list p { font-size: 12px; }
+  .contact-copy > p { font-size: 14px; line-height: 1.8; }
+  .contact-links a, .contact-form label { font-size: 13px; }
+  .contact-form input, .contact-form textarea { font-size: 15px; }
+  .footer-inner p, .footer-inner > a:last-child { font-size: 11px; }
+}
