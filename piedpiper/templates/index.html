@@ -19,9 +19,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="wordmark" href="#home-section" aria-label="Vedant Bari, home">VB<span>.</span></a>
-      <details class="site-menu">
-        <summary aria-label="Toggle navigation"><span></span><span></span><span></span></summary>
-        <nav class="primary-nav" aria-label="Main navigation">
+      <div class="site-menu">
+        <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+        <label class="menu-button" for="menu-toggle" aria-hidden="true"><span></span><span></span><span></span></label>
+        <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
           <a href="#about-section">About</a>
           <a href="#experience-section">Experience</a>
           <a href="#projects-section">Projects</a>
@@ -30,7 +31,7 @@
           <a href="#contact-section">Contact</a>
           <a class="nav-resume" href="{% static 'pdf/VedantBariResume-4.pdf' %}" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a>
         </nav>
-      </details>
+      </div>
     </div>
   </header>
 
