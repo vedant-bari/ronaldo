@@ -204,3 +204,54 @@ button, input, textarea { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Desktop visual refinement after local browser review */
+@media (min-width: 681px) {
+  .container {
+    width: min(1200px, calc(100% - 64px));
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+  }
+
+  .hero-bottom {
+    max-width: 1000px;
+    align-items: center;
+    gap: 44px;
+  }
+
+  .hero-actions {
+    padding-bottom: 0;
+  }
+
+  .hero-footnote {
+    margin-top: 70px;
+  }
+
+  .about-section {
+    padding-top: 74px;
+  }
+
+  .about-copy p {
+    font-size: 15px;
+  }
+
+  .timeline-main > p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .experience-highlights {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .tag-list span {
+    font-size: 10px;
+  }
+
+  .section-intro {
+    font-size: 14px;
+  }
+}
